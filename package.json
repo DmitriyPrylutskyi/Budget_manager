@@ -6,14 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "DmitriyPrylutskyi (https://github.com/DmitriyPrylutskyi)",
+  "author": "DmitriyPrylutskyi",
   "license": "ISC",
-  "homepage": "https://github.com/gdomaradzki/focus-gestor-orcamentos#readme",
+  "homepage": "https://github.com/DmitriyPrylutskyi",
   "_moduleAliases": {
     "@root": ".",
     "@BudgetManager": "./services/API",
-    "@BudgetManagerModels":"./services/API/app/models",
-    "@BudgetManagerAPI":"./services/API/config/app.js",
+    "@BudgetManagerModels": "./services/API/app/models",
+    "@BudgetManagerAPI": "./services/API/config/app.js",
     "@config": "./services/API/config/index.js"
   },
   "dependencies": {
