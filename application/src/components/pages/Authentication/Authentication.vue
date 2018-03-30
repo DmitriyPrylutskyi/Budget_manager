@@ -51,8 +51,8 @@
       </v-form>
     </div>
 
-    <v-snackbar timeout="6000"
-                bottom="bottom"
+    <v-snackbar :timeout="6000"
+                :bottom=true
                 color="red lighten-1"
                 v-model="snackbar">
       {{ message }}
@@ -104,13 +104,17 @@
     min-width: 272px;
     max-width: 320px;
     animation: bounceIn 1s forwards ease;
+    label, input, .icon {
+      color: #29b6f6!important;
+    }
+    .input-group__details {
+      &:before {
+        background-color: $border-color-input !important;
+      }
+    }
   }
   .l-signup {
-    background-color: $background-color;
-    padding: 15px;
-    margin: 45px auto;
-    min-width: 272px;
-    max-width: 320px;
+    @extend .l-auth;
     animation: slideInFromLeft 1s forwards ease;
   }
 </style>
