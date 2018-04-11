@@ -21,7 +21,7 @@ api.store = (User, Budget, Client, Token) => (req, res) => {
 
 				budget.save(error => {
 					if (error) res.status(400).json(error)
-					res.status(200).json({ success: true, message: "Budget registered successfully" })
+					res.status(200).json({ success: true, message: "List registered successfully" })
 				})
 			} else {
 				res.status(400).json({ success: false, message: "Invalid client" })

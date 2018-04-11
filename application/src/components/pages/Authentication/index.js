@@ -8,6 +8,7 @@ export default {
   authenticate (context, credentials, redirect) {
     Axios.post(`${API}/api/v1/auth`, credentials)
       .then(({data}) => {
+        console.log(data)
         context.$cookie.set('token', data.token, '1D')
         context.$cookie.set('user_id', data.user_id, '1D')
         context.validLogin = true

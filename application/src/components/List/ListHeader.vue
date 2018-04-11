@@ -1,20 +1,24 @@
 <template>
-  <header class="l-budget-header">
-    <div class="md-budget-header white--text">Client</div>
-    <div class="md-budget-header white--text">Title</div>
-    <div class="md-budget-header white--text">Status</div>
-    <div class="md-budget-header white--text">Actions</div>
+  <header class="l-list-header">
+    <div class="md-list-header white--text"
+         v-if="headers != null"
+         v-for="(header, index) in headers"
+         :key='index'>
+        {{ header }}
+    </div>
   </header>
 </template>
 
 <script>
-  export default {}
+  export default {
+    props: ['headers']
+  }
 </script>
 
 <style lang="scss">
   @import "./../../assets/styles";
 
-  .l-budget-header {
+  .l-list-header {
     display: none;
     width: 100%;
 
@@ -23,7 +27,7 @@
       display: flex;
     }
 
-    .md-budget-header {
+    .md-list-header {
       width: 100%;
       background-color: $background-color;
       border: 1px solid $border-color-input;
