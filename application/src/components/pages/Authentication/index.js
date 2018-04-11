@@ -10,7 +10,7 @@ export default {
       .then(({data}) => {
         console.log(data)
         context.$cookie.set('token', data.token, '1D')
-        context.$cookie.set('user_id', data.user_id, '1D')
+        context.$cookie.set('user_id', data.user._id, '1D')
         context.validLogin = true
         this.user.authenticated = true
 
