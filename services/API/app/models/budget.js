@@ -26,6 +26,11 @@ const Schema = mongoose.Schema({
 		ref: 'Client'
 	},
 
+	description: {
+		type: String,
+		required: true
+	},
+
 	items: [{}]
 });
 

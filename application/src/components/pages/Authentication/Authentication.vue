@@ -1,7 +1,7 @@
 <template>
   <div class="l-auth-container">
     <div class="l-auth">
-      <v-form v-model="validLogin">
+      <v-form v-model="validLogin" autocomplete="off">
         <v-text-field label="Username"
                       v-model="credentials.username"
                       prepend-icon="account_box"
@@ -18,6 +18,7 @@
                       :append-icon-cb="() => (loginPasswordVisible = !loginPasswordVisible)"
                       :type="loginPasswordVisible ? 'text' : 'password'"
                       color="light-blue lighten-1"
+                      autocomplete="new-password"
                       required>
         </v-text-field>
 
